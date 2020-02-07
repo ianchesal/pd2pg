@@ -22,7 +22,11 @@ often as you'd like to refresh your database.
 You'll need the following config set in environment variables:
 
 * `PAGERDUTY_API_KEY`: a read-only API key from `https://api.pagerduty.com/api_keys`.
-* `DATABASE_URL`: URL to a Postgres database, e.g. `postgres://127.0.0.1:5432/pagerduty`
+* `DATABASE_URL`: URL to a Postgres database, e.g. `postgres://user:password@127.0.0.1:5432/pagerduty`
+
+And optionally:
+
+* `PAGERDUTY_EPOCH`: the datetime to start from when pulling all PagerDuty events. Default: `2009-01-01T00:00Z`
 
 Perform a one-time schema load with:
 
